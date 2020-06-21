@@ -6,10 +6,12 @@
 </head>
 
 <body>
-    <h1>Setuptourist</h1>
-    <p>Add a new creator</p>
-    <input class="channel-input" type="text" placeholder="paste YouTube url" />
-    <button type="submit" onclick="submitChannel()">submit</button>
+    <header>
+        <h1>Setuptourist</h1>
+        <p>Add a new creator</p>
+        <input class="channel-input" type="text" placeholder="paste YouTube url" />
+        <button type="submit" onclick="submitChannel()">submit</button>
+    </header>
 
     <div class="container"></div>
 
@@ -44,6 +46,9 @@
             const ctr = document.querySelector('.container');
 
             creators.forEach(creator => {
+                const anchor = newEl('a', {
+                    href: creator.ytURL
+                });
                 const card = newEl('div', {
                     class: 'card'
                 });
@@ -56,7 +61,8 @@
                 img.style.width = '100px';
                 card.appendChild(title);
                 card.appendChild(img);
-                ctr.appendChild(card);
+                anchor.appendChild(card)
+                ctr.appendChild(anchor);
             })
         }
 
