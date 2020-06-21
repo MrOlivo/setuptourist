@@ -1,0 +1,20 @@
+body {
+    background-color: whitesmoke;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.card {
+    margin: 5px;
+    padding: 20px;
+    background-color: white;
+    width: 150px;
+    -webkit-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.75);
+}
