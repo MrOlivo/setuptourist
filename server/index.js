@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+
 const path = require('path');
 const bodyParser = require('body-parser');
 
@@ -14,10 +15,6 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // disabled for security on local
     res.header("Access-Control-Allow-Headers", "Content-Type");
     next();
-});
-
-app.get('/', async (req, res) => {
-    res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.get('/creators', async (req, res) => {
